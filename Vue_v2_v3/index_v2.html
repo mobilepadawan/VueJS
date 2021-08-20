@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue V2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN de VUE 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ mensaje }}
+        <!--Eventos-->
+        <button v-on:click="reverserText">Reverso del texto</button>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                mensaje: 'Hola Coderhouse!'
+            },
+            methods: {
+                reverserText: function(){
+                    this.mensaje = this.mensaje.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
