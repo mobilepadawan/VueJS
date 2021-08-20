@@ -9,15 +9,41 @@
     </head>
     <body>
         <div id="app">
-
+            <input type="number" v-model="numero1">
+            <input type="number" v-model="numero2">
+            <hr>
+            <p>RESULTADO +: {{suma()}}</p>
+            <br>
+            <br>
+            <p>RESULTADO -: {{resta()}}</p>
+            <br>
+            <br>
+            <p>RESULTADO *: {{multiplicacion()}}</p>
+            <br>
+            <br>
+            <p>RESULTADO /: {{division()}}</p>
         </div>
         <script>
             const app = new Vue({
                 el: '#app',
                 data: {
-                    nombre: "Coderhouse",
-                    cursos: 10,
-                    estado: false
+                    numero1: 0,
+                    numero2: 0,
+                },
+                //Crear un método mediante "methods"
+                methods: {
+                    suma:function(){
+                        return this.numero1 - (- this.numero2)
+                    },
+                    resta:function(){
+                        return this.numero1 - this.numero2
+                    },
+                    multiplicacion:function(){
+                        return this.numero1 * this.numero2
+                    },
+                    division:function(){
+                        return this.numero1 / this.numero2
+                    }
                 }
             })
         </script>
