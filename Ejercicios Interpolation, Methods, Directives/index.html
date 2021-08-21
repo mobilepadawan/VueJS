@@ -8,9 +8,9 @@
 </head>
 <body>
    <div id="app">
-      <p>Título: </p>
+      <p>Título: {{ titulo }}</p>
       <br>
-      <p>Estreno: </p>
+      <p>Estreno: {{ estreno }}</p>
       <br><br>
       <p>La película es [nueva/vieja]</p>
       <br><br>
@@ -20,7 +20,8 @@
       let app = new Vue({
          el: '#app',
          data: {
-            
+            titulo: "Halt and catch Fire",
+            estreno: 2014
          }
       })
    </script>
