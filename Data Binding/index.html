@@ -9,14 +9,24 @@
     </head>
     <body>
         <div id="app">
-            <h1>...</h1>
-            <input type="text" placeholder="Escriba un texto">
+            <h1>{{mensaje}}</h1> <!--interpolación-->
+            <h3 v-text="url"></h3> <!--directiva v-text-->
+            <input type="text" placeholder="Escriba un texto" v-model="mensaje">
+            <hr>
+            <a :href="url" target="_blank">Coderhouse</a>
         </div>
         <script>
-            const data = document.querySelector("input")
-            const dataModifile = document.querySelector("h1")
-            data.addEventListener('keyup', function(){
-                dataModifile.innerHTML = data.value
+            // const data = document.querySelector("input")
+            // const dataModifile = document.querySelector("h1")
+            // data.addEventListener('keyup', function(){
+            //     dataModifile.innerHTML = data.value
+            // })
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    mensaje: 'Hola Coderhouse!',
+                    url: 'https://www.coderhouse.com/'
+                }
             })
         </script>
     </body>
