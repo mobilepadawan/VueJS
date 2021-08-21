@@ -8,10 +8,11 @@
 </head>
 <body>
    <div id="app">
-      <h1>{{ firstName }}</h1>
-      <h2>{{ lastName }}</h2>
-      <!-- <h3>{{ getFullName() }}</h3> -->
-      <h4> {{ getFullNameWithParams(firstName, lastName) }} </h4>
+      <h1 style="color: blue">{{ firstName }}</h1>
+      <h2 style="color: blue">{{ lastName }}</h2>
+      <h3 style="color: green">{{ getFullName() }}</h3>
+      <h4 style="color: orange"> {{ getFullNameWithParams(firstName, lastName) }} </h4>
+      <h5 style="color: red">{{ getFullNameAsObject(firstName, lastName).nombre }}</h5>
    </div>
    <script>
       let app = new Vue({
@@ -20,14 +21,19 @@
             firstName: 'Fernando',
             lastName: 'O.'
          },
-         methods: {
-         //    getFullName: function() {
-         //       return this.firstName + ` ` + this.lastName
-         //    }
-         // },
-            getFullNameWithParams: function(first, last) {
+         methods: { //do not use arrow functions on Vue (at least on Vue 2)
+            getFullName: function() {
+               return this.firstName + ` ` + this.lastName
+            },
+            getFullNameWithParams: (first, last)=> {
                return first + ' ' + last
+            },
+            getFullNameAsObject: (first, last)=> {
+               return {
+                  nombre: first + ' ' + last
+               }
             }
+         }
       })
    </script>
 </body>
