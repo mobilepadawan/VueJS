@@ -8,14 +8,17 @@
 </head>
 <body>
    <div id="app">
-      {{ age }}
+      <!--  {{ message }} -->
+      <!-- {{ age > 60 ? 'Old': 'Young' }}> -->
+      <h3> {{ nombre.split(' ')[0] }}</h3>
    </div>
    <script>
       let app = new Vue({
          el: '#app',
          data: {
             message: 'Hello World, Hello Vue!',
-            age: 46
+            age: 46,
+            nombre: 'Fernando O.'
          }
       })
    </script>
