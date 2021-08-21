@@ -10,7 +10,8 @@
    <div id="app">
       <h1>{{ firstName }}</h1>
       <h2>{{ lastName }}</h2>
-      <h3>{{ getFullName() }}</h3>
+      <!-- <h3>{{ getFullName() }}</h3> -->
+      <h4> {{ getFullNameWithParams(firstName, lastName) }} </h4>
    </div>
    <script>
       let app = new Vue({
@@ -20,11 +21,11 @@
             lastName: 'O.'
          },
          methods: {
-            getFullName: function() {
-               return this.firstName + ` ` + this.lastName
-            }
-         },
-            getFullNameWithParams: (first, last) => {
+         //    getFullName: function() {
+         //       return this.firstName + ` ` + this.lastName
+         //    }
+         // },
+            getFullNameWithParams: function(first, last) {
                return first + ' ' + last
             }
       })
