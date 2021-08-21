@@ -18,21 +18,7 @@
       let app = new Vue({
          el: '#app',
          data: {
-            firstName: 'Fernando',
-            lastName: 'O.'
-         },
-         methods: { //do not use arrow functions on Vue (at least on Vue 2)
-            getFullName: function() {
-               return this.firstName + ` ` + this.lastName
-            },
-            getFullNameWithParams: (first, last)=> {
-               return first + ' ' + last
-            },
-            getFullNameAsObject: (first, last)=> {
-               return {
-                  nombre: first + ' ' + last
-               }
-            }
+            blogUrl: 'https://www.vidamobile.com.ar/'
          }
       })
    </script>
