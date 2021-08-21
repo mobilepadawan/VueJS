@@ -12,9 +12,9 @@
       <br>
       <p>Estreno: {{ estreno }}</p>
       <br><br>
-      <p>La película es [nueva/vieja]</p>
+      <p>La serie es: {{ esViejaOnueva(estreno) }}</p>
       <br><br>
-      <div>Pasa tu mouse por aquí.</div>
+      <div v-bind:title="titulo">Pasa tu mouse por aquí.</div>
    </div>
    <script>
       let app = new Vue({
@@ -22,6 +22,11 @@
          data: {
             titulo: "Halt and catch Fire",
             estreno: 2014
+         },
+         methods: {
+            esViejaOnueva: function(anio) {
+               return (anio < 2000) ? 'Vieja' : 'Nueva'
+            }
          }
       })
    </script>
