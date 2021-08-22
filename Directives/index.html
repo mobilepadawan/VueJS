@@ -8,13 +8,21 @@
 </head>
 <body>
    <div id="app">
-      {{ message }}
+      <div v-bind:title="firstName + ' ' + lastName">Mueve el mouse aquí, para ver mi nombre.</div>
+      <br><br>
+      <button v-on:click="clickedButton">Cliquéame!</button>
    </div>
    <script>
       let app = new Vue({
          el: '#app',
          data: {
-            message: 'Hello World, Hello Vue!'
+            firstName: 'Fernando',
+            lastName: 'Moon'
+         },
+         methods: {
+            clickedButton: function(){
+               alert("El nombre guardado en data: es " + this.firstName + ' ' + this.lastName)
+            }
          }
       })
    </script>
