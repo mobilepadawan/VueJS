@@ -10,17 +10,18 @@
    <div id="app">
       <div v-bind:title="firstName + ' ' + lastName">Mueve el mouse aquí, para ver mi nombre.</div>
       <br><br>
-      <button v-on:click="clickedButton">Cliquéame!</button>
+      <button v-on:click="clickedButton($event)">Cliquéame!</button> <!-- agregamos paréntesis si debemos pasarle parámetros al método/función -->
    </div>
    <script>
       let app = new Vue({
          el: '#app',
-         data: {
+         data: { //Directiva invocando data
             firstName: 'Fernando',
             lastName: 'Moon'
          },
-         methods: {
-            clickedButton: function(){
+         methods: { //Directiva invocando un método
+            clickedButton: function(event){ //llamado a JS event (se usa $event en Vue)
+               console.log(event)
                alert("El nombre guardado en data: es " + this.firstName + ' ' + this.lastName)
             }
          }
