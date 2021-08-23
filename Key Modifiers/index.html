@@ -9,7 +9,8 @@
 <body>
    <div id="app">
       <!-- keyup.enter puede ser reemplazado por keyup.13 directamente -->
-      <input type="text" v-on:keyup.enter="pressedEnter" placeholder="Escribe algo aquí">
+      <!-- para combinar dos o más modifiers debemos escribirlos seguidos, separados x 1 punto -->
+      <input type="text" v-on:keyup.enter.space="pressedEnter" placeholder="Escribe algo aquí">
       <br><br>
       <input type="text" v-on:change="typing" placeholder="Escribe algo aquí">
    </div>
