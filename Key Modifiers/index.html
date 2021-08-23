@@ -8,7 +8,9 @@
 </head>
 <body>
    <div id="app">
-      <input type="text" v-on:keyup.enter="pressedEnter">
+      <input type="text" v-on:keyup.enter="pressedEnter" placeholder="Escribe algo aquí">
+      <br><br>
+      <input type="text" v-on:change="typing" placeholder="Escribe algo aquí">
    </div>
    <script>
       let app = new Vue({
