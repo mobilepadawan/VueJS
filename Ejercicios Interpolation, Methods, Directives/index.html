@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>EJERCICIOS: métodos, interpolación, directivas</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+      <p>Título: {{ titulo }}</p>
+      <br>
+      <p>Estreno: {{ estreno }}</p>
+      <br><br>
+      <p>La serie es: {{ esViejaOnueva(estreno) }}</p>
+      <br><br>
+      <div v-bind:title="titulo">Pasa tu mouse por aquí.</div>
+   </div>
+   <script>
+      let app = new Vue({
+         el: '#app',
+         data: {
+            titulo: "Halt and catch Fire",
+            estreno: 2014
+         },
+         methods: {
+            esViejaOnueva: function(anio) {
+               return (anio < 2000) ? 'Vieja' : 'Nueva'
+            }
+         }
+      })
+   </script>
+</body>
+</html>

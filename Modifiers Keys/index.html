@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Modifier Keys</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+      <input v-on:keyup.shift.enter="myListener" type="text" placeholder="Escribe algo aquí">
+      <br><br>
+      <button v-on:click="myButtonListener">Cliquéame!</button>
+   </div>
+   <script>
+      let app = new Vue({
+         el: '#app',
+         data: {
+         },
+         methods: {
+            myListener: function() {
+               alert('Has presionado la tecla SHIFT + ENTER.')
+            },
+            myButtonListener: function() {
+               alert('Presionaste el botón') //espera el SHIFT + Click
+               //shift: Key correspondiente a la tecla homónima
+               //meta: corresponde a la tecla WIN (en windows), o COMMAND en Mac
+            }
+         }
+      })
+   </script>
+</body>
+</html>

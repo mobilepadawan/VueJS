@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Hello World and Vue</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+      <div v-bind:title="firstName + ' ' + lastName">Mueve el mouse aquí, para ver mi nombre.</div>
+      <br><br>
+      <button v-on:click="clickedButton('El nombre guardado en data: es ', $event)">Cliquéame!</button> <!-- agregamos paréntesis si debemos pasarle parámetros al método/función -->
+   </div>
+   <script>
+      let app = new Vue({
+         el: '#app',
+         data: { //Directiva invocando data
+            firstName: 'Fernando',
+            lastName: 'Moon'
+         },
+         methods: { //Directiva invocando un método
+            clickedButton: function(msg, event){ //llamado a JS event (se usa $event en Vue)
+               console.log(event)
+               alert(msg + this.firstName + ' ' + this.lastName)
+            }
+         }
+      })
+   </script>
+</body>
+</html>
