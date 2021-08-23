@@ -10,6 +10,7 @@
    <div id="app">
       <input v-on:keyup.shift.enter="myListener" type="text" placeholder="Escribe algo aquí">
       <br><br>
+      <button v-on:click="myButtonListener">Cliquéame!</button>
    </div>
    <script>
       let app = new Vue({
@@ -19,6 +20,9 @@
          methods: {
             myListener: function() {
                alert('Has presionado la tecla SHIFT + ENTER.')
+            },
+            myButtonListener: function() {
+               alert('Presionaste el botón')
             }
          }
       })
