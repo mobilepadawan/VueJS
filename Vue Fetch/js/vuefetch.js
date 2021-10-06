@@ -13,7 +13,7 @@ const app = new Vue(
                         .then(data => {console.table(this.cursos)})
                         .catch(err => console.error(`${err}`))
                         .finally(() => {
-                            console.log(`La petición de datos remotos duró ` + console.timeEnd())
+                            console.timeEnd()
                         })
             }
         }
