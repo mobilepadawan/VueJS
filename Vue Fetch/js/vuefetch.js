@@ -5,12 +5,12 @@ const app = new Vue(
             cursos: []
         },
         methods: {
-            getCursos() {
-                fetch("https://615ceedec29813001773636d.mockapi.io/cursos")
-                    .then(response => response.json())
-                    .then(data => {this.cursos = data})
-                    .then(data => {console.table(this.cursos)})
-                    .catch(err => console.error(`${err}`))
+            async getCursos() {
+                await fetch("https://615ceedec29813001773636d.mockapi.io/cursos")
+                        .then(response => response.json())
+                        .then(data => {this.cursos = data})
+                        .then(data => {console.table(this.cursos)})
+                        .catch(err => console.error(`${err}`))
             }
         }
     }
