@@ -3,3 +3,11 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.black-bg {
+    background-color: black !important;
+}
+
+.text-yellow {
+    color: yellow !important;
+}

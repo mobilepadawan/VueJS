@@ -12,19 +12,19 @@
 </head>
 <body>
     <div id="app">
-        <h1>Cursos CH</h1>
-        <div class="alert alert-info" role="alert">
-            !Mira los cursos que CH tiene para vos!
+        <h1>Nuestros Cursos</h1>
+        <div class="alert black-bg text-yellow" role="alert">
+            !Mira los cursos que CH tiene para vos! 🤘
           </div>
           <div class="text-center">
-              <button @click="getCursos" >
+              <button class="btn btn-outline-info" @click="getCursos" >
                   CURSOS</button>
           </div>
         <br>
           <div class="container">
               <ul class="list-group" id="app">
                 <li v-for="curso in cursos" :key="curso.id">
-                    {{curso.nombre}}
+                    {{ curso.nombre }}
                 </li> 
               </ul>
           </div>
