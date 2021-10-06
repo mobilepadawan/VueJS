@@ -14,18 +14,19 @@
     <div id="app">
         <h1>Nuestros Cursos</h1>
         <br><br>
-        <!-- <div class="alert black-bg text-yellow" role="alert">
+        <div class="alert black-bg text-yellow" role="alert">
             !Mira los cursos que CH tiene para vos! 🤘
-        </div> -->
+        </div>
         <div class="text-center">
-            <button @click="getCursos" >
+            <button class="btn btn-outline-info" @click="getCursos" >
                 CURSOS</button>
         </div>
         <br>
         <div class="container">
             <ul class="list-group">
-                <li v-for="curso in cursos" :key="curso.id">
+                <li class="list-group-item d-flex justify-content-between align-items-center"  v-for="curso in cursos" :key="curso.id">
                     {{ curso.nombre }}
+                  <span class="badge bg-primary rounded-pill">{{ curso.duracion }}</span>
                 </li>
             </ul>
         </div>

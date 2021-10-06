@@ -6,6 +6,7 @@ const app = new Vue(
         },
         methods: {
             async getCursos() {
+                debugger
                 await fetch("https://615ceedec29813001773636d.mockapi.io/cursos")
                         .then(response => response.json())
                         .then(data => {this.cursos = data})
