@@ -15,19 +15,19 @@
         <h1>Nuestros Cursos</h1>
         <div class="alert black-bg text-yellow" role="alert">
             !Mira los cursos que CH tiene para vos! 🤘
-          </div>
-          <div class="text-center">
-              <button class="btn btn-outline-info" @click="getCursos" >
-                  CURSOS</button>
-          </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-info" @click="getCursos" >
+                CURSOS</button>
+        </div>
         <br>
-          <div class="container">
-              <ul class="list-group" id="app">
-                <li v-for="curso in cursos" :key="curso.id">
-                    {{ curso.nombre }}
-                </li> 
-              </ul>
-          </div>
+        <div class="container">
+            <ul class="list-group">
+            <li v-for="curso in cursos" :key="curso.id">
+                {{ curso.nombre }}
+            </li> 
+            </ul>
+        </div>
     </div>
 </body>
 </html>
