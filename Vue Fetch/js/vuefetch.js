@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 const app = new Vue(
     {
         el: "#app",
@@ -33,9 +31,13 @@ const app = new Vue(
                 }
                 await fetch(this.URL, encabezado)
                         .then((response) => response.json())
-                        .then((json) => console.log(json))
+                        .then((json) => console.log(json.data))
+            },
+            async axiosGetCursos() {
+            await axios.get(this.URL)
+                    .then((response) => {console.table(response.data)})
+                    .catch((err) => {console.error(`${err}`)})
             }
-
         }
     }
 )
