@@ -31,6 +31,6 @@ async postCurso() {
     await fetch("https://615ceedec29813001773636d.mockapi.io/cursos", encabezado)
             .then((response) => response.json())
             .then((json) => console.log(json))
-}
-        }
+        } 
     }
+})
