@@ -38,7 +38,16 @@ const app = new Vue(
                     .then((response) => {console.table(response.data)})
                     .catch((err) => {console.error(`${err}`)})
             },
-            
+            async axiosPostCurso() {
+                const nuevoCurso = {
+                    "nombre": "Deno",
+                    "creado": "2020-12-01",
+                    "duracion": 25 
+                }
+                await axios.post(this.URL, nuevoCurso)
+                        .then((response) => {console.table(response.data)})
+                        .catch((err) => {console.error(`${err}`)})
+                }
         }
     }
 )
