@@ -35,7 +35,7 @@ const app = new Vue(
             },
             async axiosGetCursos() {
             await axios.get(this.URL)
-                    .then((response) => {console.table(response.data)})
+                    .then((response) => {this.cursos = response.data})
                     .catch((err) => {console.error(`${err}`)})
             },
             async axiosPostCurso() {
