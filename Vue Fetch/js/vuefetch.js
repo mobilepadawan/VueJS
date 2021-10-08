@@ -35,14 +35,3 @@ async postCurso() {
         }
     }
 )
-
-/*
-                const encabezado = {
-                    method: "POST",
-                    mode: 'cors',
-                    cache: "no-cache",
-                    headers: {
-                        "Content-Type": "application/json",
-                    }, ...json stringity (data to post)
-
-*/
