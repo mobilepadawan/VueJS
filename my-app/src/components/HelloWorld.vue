@@ -34,7 +34,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    URL: 'https://miendpoint.com/api/cursos'
   }
 }
 </script>
