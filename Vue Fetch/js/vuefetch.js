@@ -37,7 +37,8 @@ const app = new Vue(
             await axios.get(this.URL)
                     .then((response) => {console.table(response.data)})
                     .catch((err) => {console.error(`${err}`)})
-            }
+            },
+            
         }
     }
 )
