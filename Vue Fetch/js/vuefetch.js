@@ -1,3 +1,5 @@
+const { default: axios } = require("axios")
+
 const app = new Vue(
     {
         el: "#app",
@@ -47,7 +49,25 @@ const app = new Vue(
                 await axios.post(this.URL, nuevoCurso)
                         .then((response) => {console.table(response.data)})
                         .catch((err) => {console.error(`${err}`)})
+                },
+            async axiosPutCurso() {
+                const cambioCurso = {
+                    "id": 7,
+                    "nombre": "Deno JS",
+                    "creado": "2021-12-01",
+                    "duracion": 25
                 }
+                await axios.put(this.URL, cambioCurso)
+                        .then((response) => {console.table(response.data)})
+                        .catch((err) => {console.error(`${err}`)})
+            },
+            async axiosEliminoCurso() {
+                const idToDelete = 8
+                const deleteURL = `${this.URL}${"/"}${idToDelete}`
+                await axios.delete(deleteURL)
+                        .then((response) => {console.table(response.data)})
+                        .catch((err) => {console.error(`${err}`)})
+            }
         }
     }
 )
