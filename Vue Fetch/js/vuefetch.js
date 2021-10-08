@@ -34,4 +34,3 @@ async postCurso() {
 }
         }
     }
-)Realiza el request de los diferentes objetos a través de HTTP y su representación gráfica dentro de tu proyecto Vue. Emplea las directivas apropiadas y ten presente de hacer al menos una petición sobre los datos remotos, (PUT, POST, o DELETE), tomando la información a parametrizar, desde uno o más campos de formulario.
