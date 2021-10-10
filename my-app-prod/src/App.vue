@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Coderhouse logo" src="./assets/logo.png">
     <HelloWorld msg="Implementar Vue-App en Producción"/>
   </div>
 </template>
