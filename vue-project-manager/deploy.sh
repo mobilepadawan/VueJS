@@ -13,6 +13,6 @@ git commit -m 'deploy'
 # git push -f git@github.com: <USERNAME>/<USERNAME>.github.io.git master
 
 # Si va como repositorio, habilita esta otra línea:
-git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
