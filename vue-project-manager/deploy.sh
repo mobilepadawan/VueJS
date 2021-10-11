@@ -10,7 +10,7 @@ git add -A
 git commit -m 'deploy'
 
 # si tu proyecto va como mi-usuario.github.io, habilita esta línea
-git push -f git@github.com: <USERNAME>/<USERNAME>.github.io.git master
+# git push -f git@github.com: <USERNAME>/<USERNAME>.github.io.git master
 
 # Si va como repositorio, habilita esta otra línea:
 git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
