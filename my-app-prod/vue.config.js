@@ -1,5 +1,6 @@
 // vue.config.js
 
 module.exports = {
-    // opciones de configuración...
+    publicPath: "/",
+    outputDir: "/dist"
 }
