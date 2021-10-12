@@ -2,5 +2,5 @@
 
 module.exports = {
     publicPath: "/",
-    outputDir: "/dist"
+    outputDir: "dist"
 }
