@@ -3,7 +3,8 @@ var app = new Vue({
     data: {
         message: 'Hola Coders!',
         a: 21,
-        b: 3
+        b: 3,
+        usuario: ''
     },
     methods: {
         imprimirEnConsola() {
@@ -17,6 +18,9 @@ var app = new Vue({
         duplicar() {
             this.imprimirEnConsola()
             return this.a * 2
+        },
+        nombreDeUsuario() {
+            this.usuario = input("Ingrese su nombre:")
         }
     }
  })
