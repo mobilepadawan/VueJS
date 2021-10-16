@@ -12,10 +12,12 @@ var app = new Vue({
         calculoMatematico() {
             return this.a * this.b
         }
-    
     },
     computed: {
-
+        duplicar() {
+            this.imprimirEnConsola()
+            return this.a * 2
+        }
     }
  })
  
