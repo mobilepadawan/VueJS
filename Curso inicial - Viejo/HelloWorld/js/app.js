@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        nombreCompleto: "Lee Pace",
         message: 'Hola Coders!',
         a: 21,
         b: 3,
