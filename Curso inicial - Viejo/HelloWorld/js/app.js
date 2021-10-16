@@ -4,7 +4,9 @@ var app = new Vue({
         message: 'Hola Coders!',
         a: 21,
         b: 3,
-        usuario: ''
+        usuario: '',
+        htmlCard: `<div class="card black white-text><img src="images/portada.jpg"></div>`
+        
     },
     methods: {
         imprimirEnConsola() {
@@ -15,7 +17,7 @@ var app = new Vue({
         },
         nombreDeUsuario() {
             salvarUsuario = prompt("Ingrese su nombre:")
-            this.usuario = salvarUsuario
+            this.message = salvarUsuario
             console.log(this.usuario)
         }
     },
