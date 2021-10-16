@@ -12,15 +12,17 @@ var app = new Vue({
         },
         calculoMatematico() {
             return this.a * this.b
+        },
+        nombreDeUsuario() {
+            salvarUsuario = prompt("Ingrese su nombre:")
+            this.usuario = salvarUsuario
+            console.log(this.usuario)
         }
     },
     computed: {
         duplicar() {
             this.imprimirEnConsola()
             return this.a * 2
-        },
-        nombreDeUsuario() {
-            this.usuario = input("Ingrese su nombre:")
         }
     }
  })
