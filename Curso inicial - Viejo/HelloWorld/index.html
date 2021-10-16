@@ -12,7 +12,21 @@
         {{ message }}
         <p>Resultado: {{ calculoMatematico() }}</p>
         <p>Valor duplicado de {{ a }}: {{ duplicar }}</p>
-        <button v-on:click="nombreDeUsuario">LOGIN</button>
+        <button v-on:click="iniciarSesion">LOGIN</button>
+
+        <!-- Interpolar Expresiones -->
+        <p> {{ calculoMatematico() + 1 }}</p>
+        <br>
+        <p>{{ ok ? 'Sí' : 'No' }}</p>
+        <br>
+        <p>{{ message.split('').reverse().join('') }}</p>
+        <br>
+        <p> {{ nombreDeUsuario }} </p>
+        <p v-text="nombreDeUsuario"></p>
+        <div v-html="htmlCard"></div>
+        <div class="card black white-text">
+            <img v-bind:src="portada" v-bind:alt="descripcion">
+        </div>
     </div>
     </body>
 </html>

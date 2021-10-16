@@ -5,8 +5,11 @@ var app = new Vue({
         a: 21,
         b: 3,
         usuario: '',
-        htmlCard: `<div class="card black white-text><img src="images/portada.jpg"></div>`
-        
+        htmlCard: `<div class="card black white-text><img src="images/portada.jpg"></div>`,
+        popcorn: {
+            portada: "images/movies/jobs.jpg", 
+            descripcion: "Biopic de Steve Jobs basada en su libro biográfico."
+        }
     },
     methods: {
         imprimirEnConsola() {
