@@ -13,12 +13,31 @@
     </head>
     <body>
     <div id="app">
-        <div v-if="mostrarSaludo">
-            <p> Bienvenido, {{ nombreCompleto }}</p>
+        <div>
+            <div v-if="estoyLogueado">
+                <p>Bienvenido {{ userName }}</p>
+                <p>Tienes <span class="badge rounded-pill bg-primary">{{ totalNot }}</span> 
+                    notificaciones pendientes de lectura.</p>
+            </div>
+            <div v-else="estoyLogueado === false">
+                <p>Clic <a href="login">aquí</a> para iniciar sesión.</p>
+            </div>
+            <div v-show="mostrarDiv">
+                <p>Este mensaje debería mostrarse... u ocultarse.</p>
+            </div>
+            <H1>Tareas para hoy</H1>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="(item, i) in tareas" :key="i">
+                    ({{ item.id }}) - {{ item.desc }}
+                </li>
+            </ul>
         </div>
-        <br>
-        <h1>Bienvenido de nuevo</h1>
-        <p>Tienes <span class="badge rounded-pill bg-primary">{{ totalNot }}</span> notificaciones pendientes de lectura.</p>
+
+
+
+
+
+
 
         <!-- <div>
             <input type="text" v-model="nombreCompleto">

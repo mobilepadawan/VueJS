@@ -1,18 +1,16 @@
 var app = new Vue({
     el: '#app',
     data: {
-        mostrarSaludo: false,
+        mostrarDiv: false,
+        estoyLogueado: true,
+        userName: 'JOBS, Steve',
         totalNot: 21,
-        nombreCompleto: "Lee Pace",
-        message: 'Hola Coders!',
-        a: 21,
-        b: 3,
-        usuario: '',
-        htmlCard: `<div class="card black white-text><img src="images/portada.jpg"></div>`,
-        popcorn: {
-            portada: "images/movies/jobs.jpg", 
-            descripcion: "Biopic de Steve Jobs basada en su libro biográfico."
-        }
+        tareas: [{id: 1, desc: "Revisar hardware faltante"},
+                    {id: 2, desc: "Validar user testing"},
+                    {id: 3, desc: "Verificar versión del S.O."},
+                    {id: 4, desc: "Probar instalar S.O. en SD-Card"},
+                    {id: 5, desc: "Realizar downgrade de S.O."},
+                    {id: 6, desc: "Instalar Office beta"}]                 
     },
     methods: {
         imprimirEnConsola() {
