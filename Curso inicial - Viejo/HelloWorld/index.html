@@ -13,6 +13,11 @@
     </head>
     <body>
     <div id="app">
+        <p>Fecha de nacimiento:</p>
+        <input type="date" name="calendario" id="calendario" min="2021-01-01" max="2021-10-31">
+        <br>
+        <br>
+        <br>
         <div>
             <div v-if="estoyLogueado">
                 <p>Bienvenido {{ userName }}</p>
@@ -36,28 +41,6 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur sequi nesciunt, dolores voluptatum porro dignissimos, maiores quas vero hic at fugiat sunt optio esse praesentium? Hic totam porro pariatur voluptas.</p>
             </div>
         </div>
-
-
-
-
-
-
-
-        <!-- <div>
-            <input type="text" v-model="nombreCompleto">
-        </div> -->
-        <!-- directiva original -->
-        <!-- <a v-bind:href="url">...</a> -->
-        <!-- abreviatura -->
-        <!-- <a :href="url">...</a>
-        <mi-componente v-if="condition">
-            <div>...</div>
-        </mi-componente> -->
-
-        <!-- directiva original -->
-        <!-- <a v-on:click="iniciarSesion">...</a> -->
-        <!-- abreviatura -->
-        <!-- <a @click="iniciarSesion">...</a> -->
     </div>
     </body>
 </html>
