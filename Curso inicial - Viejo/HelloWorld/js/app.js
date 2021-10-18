@@ -10,7 +10,11 @@ var app = new Vue({
                     {id: 3, desc: "Verificar versión del S.O."},
                     {id: 4, desc: "Probar instalar S.O. en SD-Card"},
                     {id: 5, desc: "Realizar downgrade de S.O."},
-                    {id: 6, desc: "Instalar Office beta"}]                 
+                    {id: 6, desc: "Instalar Office beta"}],
+        cssClasses: {
+            "bg-warning": true,
+            "text-secondary": true,
+        }
     },
     methods: {
         imprimirEnConsola() {

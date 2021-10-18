@@ -27,10 +27,14 @@
             </div>
             <H1>Tareas para hoy</H1>
             <ul class="list-group">
-            <li class="list-group-item" v-for="(item, i) in tareas" :key="i">
+            <li :class="list-group-item" v-for="(item, i) in tareas" :key="i">
                 ({{ item.id }}) - {{ item.desc }}
             </li>
             </ul>
+            <br>
+            <div :class="cssClasses" :style="{'padding': '20px 10px'}">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur sequi nesciunt, dolores voluptatum porro dignissimos, maiores quas vero hic at fugiat sunt optio esse praesentium? Hic totam porro pariatur voluptas.</p>
+            </div>
         </div>
 
 
