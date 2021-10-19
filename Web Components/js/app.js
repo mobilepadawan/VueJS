@@ -7,7 +7,7 @@ Vue.component('trailerflix-card', {
                         <p>{{ title }}</p>
                         <br>
                     </div>
-               </div>`
+                </div>`,
 })
 
 var app = new Vue({
