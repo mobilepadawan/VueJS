@@ -13,14 +13,17 @@
     </head>
     <body>
         <div id="app">
-            <h1 class="main-title">CODERFLIX</h1>
+            <h1 class="main-title">CODERMEALS 🍝</h1>
             <div class="container">
-                <trailerflix-card class="card"
-                    v-for="(movie, index) in coderflix" :key="index"
-                    :cover="movie.portada"
-                    :title="movie.titulo">
-                </trailerflix-card>
+                <codermeals-card class="card"
+                    v-for="(piatti, index) in codermeals"
+                    :key="piatti.id"
+                    :cover="piatti.portada"
+                    :title="piatti.titulo"
+                    :costo="piatti.costo">
+                </codermeals-card>
             </div>
+            </container>
         </div>
     </body>
 </html> 
