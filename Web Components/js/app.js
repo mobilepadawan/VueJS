@@ -2,7 +2,7 @@ Vue.component('trailerflix-moviecard', {
     props: ['cover', 'title'],
     template: `<div align="center">
                     <div>
-                        <img :src="cover" :title="title" width="200px">
+                        <img :src="cover" :title="title">
                         <br><br>
                         <p>{{ title }}</p>
                         <br>
