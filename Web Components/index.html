@@ -13,16 +13,14 @@
 </head>
 <body>
     <div id="app">
-        <div>
-            <trailerflix-moviecard class="movie-div"
-                v-for="(movie, index) in coderflix"
-                :key="index"
-                :cover="coderflix.portada"
-                :alt="coderflix.titulo"
-                :title="coderflix.titulo">
-            </trailerflix-moviecard>
+        <h1 class="main-title">TRAILERFLIX</h1>
+        <div class="container">
+                <trailerflix-moviecard class="card"
+                    v-for="(movie, index) in coderflix" :key="index"
+                    :cover="movie.portada"
+                    :title="movie.titulo">
+                </trailerflix-moviecard>
         </div>
-        </container>
     </div>
 </body>
 </html> 
