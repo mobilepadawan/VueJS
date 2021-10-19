@@ -1,4 +1,4 @@
-Vue.component('trailerflix-moviecard', {
+Vue.component('trailerflix-card', {
     props: ['cover', 'title'],
     template: `<div align="center">
                     <div>
