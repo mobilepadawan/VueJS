@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="CH logo" src="./assets/logo.png" width="160px">
     <HelloWorld msg="Bienvenidos a CODERHOUSE."/>
   </div>
 </template>
