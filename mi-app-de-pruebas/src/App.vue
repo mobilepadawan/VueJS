@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <img alt="CH logo" src="./assets/logo.png" width="160px">
-    <HelloWorld msg="Bienvenidos a CODERHOUSE."/>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      HelloWorld
-    }
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
   }
-
+}
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
