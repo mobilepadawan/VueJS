@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Bienvenidos a Vue/Cli, a través de CODERHOUSE."/>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -14,6 +15,16 @@ export default {
     HelloWorld
   }
 }
+
+  import HelloWorld from './components/HelloWorld.vue'
+
+  export default {
+    name: 'App',
+    components: {
+      HelloWorld
+    }
+  }
+
 </script>
 
 <style>
