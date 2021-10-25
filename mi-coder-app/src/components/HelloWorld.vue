@@ -18,12 +18,12 @@ export default {
     answer: 'Has una pregunta para obtener tu respuesta!'
 	},
 	watch: {
-    question: function (newQuestion, oldQuestion) {
+    question: (newQuestion, oldQuestion)=> {
       this.answer = 'Esperando que deje de escribir...'
       this.debouncedGetAnswer()
     },
 		methods: {
-			getAnswer:  function () {
+			getAnswer: ()=> {
 				if (this.question.indexOf('?') === -1) {
 					this.answer = 'Las preguntas contienen signo de interrogación. ;-)'
 					return
@@ -31,10 +31,10 @@ export default {
 				this.answer = 'Pensando...'
 				var vm = this
 				axios.get('https://yesno.wtf/api')
-					.then(function (response) {
+					.then((response)=>  {
 						vm.answer = _.capitalize(response.data.answer)
 					})
-					.catch(function (error) {
+					.catch((error)=> {
 						vm.answer = `¡Error! La API no respondió: ${error}`
 					})
 			}
