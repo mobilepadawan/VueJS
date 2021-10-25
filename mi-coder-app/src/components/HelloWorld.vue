@@ -1,19 +1,41 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ mensaje }}</h1>
   </div>
-  <blog-post v-bind:titulo="post.titulo ' (por ' post.autor + ')'"></blog-post>
 </template>
 
 <script>
 export default {
-  name: 'blogPost',
+  name: 'HelloWorld',
   props: {
-    titulo: String,
-    mensaje: String,
-    autor: String,
-    fecha: Date
-  }
+		mensaje: String
+  },
+	data: {
+		question: '',
+    answer: 'Has una pregunta para obtener tu respuesta!',
+		names: [],
+		nombre: '',
+		apellido: '',
+		nombreCompleto: ''
+	},
+	watch: {
+    question: (newQuestion, oldQuestion)=> {
+      this.answer = 'Esperando que deje de escribir...'
+      this.debouncedGetAnswer()
+    }
+		},
+		computed: {
+			nombreCompleto: {
+				get: ()=> {
+					return 'Coder ' + 'House'
+				},
+				set: (nuevoValor)=> {
+					this.names = nuevoValor.split(' ')
+					this.nombre = names[0]
+					this.apellido = names[1]
+				}
+			}
+		}
 }
 </script>
 
