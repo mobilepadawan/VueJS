@@ -2,13 +2,17 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
   </div>
+  <blog-post v-bind:titulo="post.titulo ' (por ' post.autor + ')'"></blog-post>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'blogPost',
   props: {
-    msg: String
+    titulo: String,
+    mensaje: String,
+    autor: String,
+    fecha: Date
   }
 }
 </script>
