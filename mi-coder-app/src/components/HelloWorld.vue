@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="saludo">
+    <h1>{{ mensaje }}</h1>
+	<mi-componente v-on:mi-evento-personalizado="ejecutarUnaAccion"></mi-componente>
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   name: 'HelloWorld',
   props: {
-    error: Number,
+    	error: Number,
 		mensaje: String,
 		icono: String,
 		fechaError: Date
@@ -37,6 +38,11 @@ export default {
 					this.nombre = names[0]
 					this.apellido = names[1]
 				}
+			}
+		},
+		methods: {
+			enviarEvento() {
+				this.$emit('miEventoPersonalizado')
 			}
 		}
 }
