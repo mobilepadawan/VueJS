@@ -15,28 +15,27 @@ export default {
   },
 	data: {
 		question: '',
-    answer: 'Has una pregunta para obtener tu respuesta!'
+    answer: 'Has una pregunta para obtener tu respuesta!',
+		names: [],
+		nombre: '',
+		apellido: ''
 	},
 	watch: {
     question: (newQuestion, oldQuestion)=> {
       this.answer = 'Esperando que deje de escribir...'
       this.debouncedGetAnswer()
-    },
-		methods: {
-			getAnswer: ()=> {
-				if (this.question.indexOf('?') === -1) {
-					this.answer = 'Las preguntas contienen signo de interrogación. ;-)'
-					return
+    }
+		},
+		computed: {
+			nombreCompleto: {
+				get: ()=> {
+					return 'Coder ' + 'House'
+				},
+				set: (nuevoValor)=> {
+					this.names = nuevoValor.split(' ')
+					this.nombre = names[0]
+					this.apellido = names[1]
 				}
-				this.answer = 'Pensando...'
-				var vm = this
-				axios.get('https://yesno.wtf/api')
-					.then((response)=>  {
-						vm.answer = _.capitalize(response.data.answer)
-					})
-					.catch((error)=> {
-						vm.answer = `¡Error! La API no respondió: ${error}`
-					})
 			}
 		}
 }
