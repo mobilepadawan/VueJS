@@ -18,7 +18,8 @@ export default {
     answer: 'Has una pregunta para obtener tu respuesta!',
 		names: [],
 		nombre: '',
-		apellido: ''
+		apellido: '',
+		nombreCompleto: ''
 	},
 	watch: {
     question: (newQuestion, oldQuestion)=> {
