@@ -2,12 +2,13 @@
   <div class="saludo">
     <h1>{{ mensaje }}</h1>
 	<mi-componente v-on:mi-evento-personalizado="ejecutarUnaAccion"></mi-componente>
+	<base-input v-on:focus.native="onFocus"></base-input>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'blogPost',
   props: {
     	error: Number,
 		mensaje: String,
