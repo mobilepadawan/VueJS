@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ mensaje }}</h1>
+    <!-- Una opción de pasaje de array -->
+    <blog-post v-bind:autor="{nombre: 'Coder House', fecha: '25-10-2021'}"></blog-post>
+    <!-- Otra opción de pasaje de array -->
+    <blog-post post.autor="post.autor"></blog-post>
   </div>
 </template>
 
@@ -8,7 +12,8 @@
 export default {
   name: 'HelloWorld',
   props: {
-		mensaje: String
+		mensaje: String,
+    commentIds: [211, 213, 147]
   },
 	data: {
 		question: '',
