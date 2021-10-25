@@ -10,10 +10,17 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'blogPost',
   props: {
-		mensaje: String,
-    commentIds: [211, 213, 147]
+		titulo: String,
+    publicacion: String,
+    autor: String,
+    fecha: Date,
+    commentIds: Array
+  },
+  mounted() {
+      console.info(`El título del post es: ${this.$props.titulo}`)
+      console.info(`Y su autor: ${this.$props.autor}`)
   },
 	data: {
 		question: '',
@@ -40,7 +47,7 @@ export default {
 					this.apellido = names[1]
 				}
 			}
-		}
+		},
 }
 </script>
 
