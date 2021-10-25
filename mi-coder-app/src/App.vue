@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="CH logo" src="./assets/logo.png" width="160px">
     <HelloWorld msg="Bienvenidos a CODERHOUSE."/>
+    <blog-post post.is-published="false"></blog-post>
   </div>
 </template>
 
