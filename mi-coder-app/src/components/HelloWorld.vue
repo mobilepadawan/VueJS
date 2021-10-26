@@ -1,7 +1,6 @@
 <template>
   <div class="saludo">
     <h1>{{ mensaje }}</h1>
-<<<<<<< HEAD
     <!-- Una opción de pasaje de array -->
     <blog-post v-bind:autor="{nombre: 'Coder House', fecha: '25-10-2021'}"></blog-post>
     <!-- Otra opción de pasaje de array -->
@@ -28,10 +27,6 @@
         <p v-bind:id="upperize">Información del contacto...</p>
       </footer>
     </div>
-=======
-	<mi-componente v-on:mi-evento-personalizado="ejecutarUnaAccion"></mi-componente>
-	<base-input v-on:focus.native="onFocus"></base-input>
->>>>>>> 9037b18d54ae57ed3e89e9c9ea00697488ce70f8
   </div>
 </template>
 
