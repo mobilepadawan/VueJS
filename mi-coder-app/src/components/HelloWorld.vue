@@ -4,12 +4,48 @@
     <!-- Una opción de pasaje de array -->
     <blog-post v-bind:autor="{nombre: 'Coder House', fecha: '25-10-2021'}"></blog-post>
     <!-- Otra opción de pasaje de array -->
-    <blog-post post.autor="post.autor"></blog-post>
+    <blog-post post.autor="post.autor" v-bind="$attrs">
+      ...
+    </blog-post>
+    <base-input ref="usernameInput">
+      <input ref="input">
+    </base-input>
+    <div>
+      <h1 slot="header">Encabezado principal</h1>
+      <p>Párrafo para la sección Main</p>
+      <p slot="footer">Información del contacto...</p>
+    </div>
+    <div class="container">
+      <header>
+        <h1>Encabezado principal</h1>
+      </header>
+      <main>
+        <p>{{ mensaje | capitalize }}</p>
+        <p slot="footer">Información del contacto...</p>
+      </main>
+      <footer>
+        <p v-bind:id="upperize">Información del contacto...</p>
+      </footer>
+    </div>
   </div>
 </template>
 
+
 <script>
+
+Vue.filter('formatId', (value)=> {
+  if (!value) return 0
+  return value.toFixed(2)
+})
+
 export default {
+  filters: {
+    capitalize: (value)=> {
+      if (!value) return ''
+      value = value.toString()
+      value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
+    }
+  },
   name: 'blogPost',
   props: {
 		titulo: String,
@@ -32,8 +68,8 @@ export default {
 	},
 	watch: {
     question: (newQuestion, oldQuestion)=> {
-      this.answer = 'Esperando que deje de escribir...'
-      this.debouncedGetAnswer()
+      this.$data.answer = 'Esperando que deje de escribir...'
+      console.log(`La pregunta que formula, es: ${this.$data.question}`)
     }
 		},
 		computed: {
