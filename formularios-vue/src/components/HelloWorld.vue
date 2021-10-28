@@ -4,46 +4,46 @@
       <div class="row">
         <div class="col col-12">
           <br><br>
-          <label for="exampleFormControlInputName" class="text-start">Tu nombre</label>
-          <input type="text" class="form-control" id="exampleFormControlInputName" placeholder="Nombre completo" required>
+          <label for="inputNombre" class="text-start">Tu nombre</label>
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" required>
           <br>
-          <label for="exampleFormControlAge" class="form-label text-start">Edad</label>
-          <input type="number" class="form-control" id="exampleFormControlAge" placeholder="Edad">
+          <label for="inputEdad" class="form-label text-start">Edad</label>
+          <input type="number" class="form-control" id="inputEdad" placeholder="Edad">
           <br>
-          <label for="exampleFormControlEmail" class="form-label text-start">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlEmail" placeholder="tu@email.com">
+          <label for="inputEmail" class="form-label text-start">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com">
           <br>
           <div class="row">
             <h4>Selecciona tu curso</h4>
             <div class="col col-2">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckJS">
-                <label class="form-check-label" for="flexCheckJS">
+                <input class="form-check-input" type="checkbox" value="" id="checkJS">
+                <label class="form-check-label" for="checkJS">
                   JavaScript
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckReact">
-                <label class="form-check-label" for="flexCheckReact">
+                <input class="form-check-input" type="checkbox" value="" id="checkReact">
+                <label class="form-check-label" for="checkReact">
                   React
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckNg">
-                <label class="form-check-label text-start" for="flexCheckNg">
+                <input class="form-check-input" type="checkbox" value="" id="checkNg">
+                <label class="form-check-label text-start" for="checkNg">
                   Angular
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckVue">
-                <label class="form-check-label" for="flexCheckVue">
+                <input class="form-check-input" type="checkbox" value="" id="checkVue">
+                <label class="form-check-label" for="checkVue">
                   Vue
                 </label>
               </div>
             </div>
           </div>
-          <label for="exampleFormControlTextarea1" class="form-label text-start">Comentarios</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="areaComentarios" class="form-label text-start">Comentarios</label>
+          <textarea class="form-control" id="areaComentarios" rows="3"></textarea>
           <br>
           <div class="row">
             <br>
@@ -64,6 +64,7 @@
 export default {
   name: 'HelloWorld',
   props: {
+
   }
 }
 </script>
