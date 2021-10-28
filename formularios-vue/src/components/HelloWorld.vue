@@ -5,7 +5,9 @@
         <div class="col col-12">
           <br><br>
           <label for="inputNombre" class="text-start">Tu nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" required>
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model="nombre">
+          <br>
+          <p>Validar nombre: {{ nombre }}</p>
           <br>
           <label for="inputEdad" class="form-label text-start">Edad</label>
           <input type="number" class="form-control" id="inputEdad" placeholder="Edad">
@@ -17,7 +19,7 @@
             <h4>Selecciona tu curso</h4>
             <div class="col col-2">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="checkJS">
+                <input class="form-check-input" type="checkbox" value="" id="checkJS" v-model="javascript">
                 <label class="form-check-label" for="checkJS">
                   JavaScript
                 </label>
@@ -42,6 +44,8 @@
               </div>
             </div>
           </div>
+          <br>
+          <p>Validar JS: {{ javascript }}</p>
           <label for="areaComentarios" class="form-label text-start">Comentarios</label>
           <textarea class="form-control" id="areaComentarios" rows="3"></textarea>
           <br>
@@ -65,6 +69,18 @@ export default {
   name: 'HelloWorld',
   props: {
 
+  },
+  data() {
+    return {
+      nombre: '',
+      edad: 0,
+      email: '',
+      javascript: false,
+      react: false,
+      angular: false,
+      vue: false,
+      comentarios: ''
+    }
   }
 }
 </script>
