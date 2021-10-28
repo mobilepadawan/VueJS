@@ -13,6 +13,35 @@
           <label for="exampleFormControlEmail" class="form-label text-start">Email</label>
           <input type="email" class="form-control" id="exampleFormControlEmail" placeholder="tu@email.com">
           <br>
+          <div class="row">
+            <h4>Selecciona tu curso</h4>
+            <div class="col col-2">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckJS">
+                <label class="form-check-label" for="flexCheckJS">
+                  JavaScript
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckReact">
+                <label class="form-check-label" for="flexCheckReact">
+                  React
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckNg">
+                <label class="form-check-label text-start" for="flexCheckNg">
+                  Angular
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckVue">
+                <label class="form-check-label" for="flexCheckVue">
+                  Vue
+                </label>
+              </div>
+            </div>
+          </div>
           <label for="exampleFormControlTextarea1" class="form-label text-start">Comentarios</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           <br>
