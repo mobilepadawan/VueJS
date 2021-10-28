@@ -32,6 +32,43 @@
 
 
 <script>
+var mixin = {
+  data: function () {
+    return {
+      message: 'hola',
+      foo: 'abc'
+    }
+  }
+}
+
+new Vue({
+  mixins: [mixin],
+  data: function () {
+    return {
+      message: 'adiós',
+      bar: 'def'
+    }
+  },
+  created: function () {
+    console.log(this.$data)
+    // => { message: "adiós", foo: "abc", bar: "def" }
+  }
+})
+
+// inyectar un controlador para la opción personalizada `myOption`
+Vue.mixin({
+  created: function () {
+    var myOption = this.$options.myOption
+    if (myOption) {
+      console.log(myOption)
+    }
+  }
+})
+//Realizar un filtro personalizado de vista y aplicarlo. Crear mixins y verificar su funcionamiento
+new Vue({
+  myOption: 'hola!'
+})
+// => "hola!"
 
 Vue.filter('formatId', (value)=> {
   if (!value) return 0
