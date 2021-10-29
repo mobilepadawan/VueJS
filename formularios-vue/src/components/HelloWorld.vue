@@ -68,7 +68,18 @@
 export default {
   name: 'HelloWorld',
   props: {
-
+    formulario: [
+      {
+        nombre: '',
+        edad: 0,
+        email: '',
+        javascript: false,
+        react: false,
+        angular: false,
+        vue: false,
+        comentarios: ''
+      }
+    ]
   },
   data() {
     return {
