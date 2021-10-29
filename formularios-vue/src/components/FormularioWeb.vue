@@ -66,7 +66,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'FormularioWeb',
   props: {
     formulario: [
       {
@@ -84,13 +84,13 @@ export default {
   data() {
     return {
       nombre: '',
-      edad: 0,
-      email: '',
+    //   edad: 0,
+    //   email: '',
       javascript: false,
-      react: false,
-      angular: false,
-      vue: false,
-      comentarios: ''
+    //   react: false,
+    //   angular: false,
+    //   vue: false,
+    //   comentarios: ''
     }
   }
 }

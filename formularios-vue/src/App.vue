@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="CH logo" src="./assets/logo.png" class="logo-small">
-    <HelloWorld />
+    <FormularioWeb />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/FormularioWeb.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormularioWeb
   }
 }
 </script>
