@@ -7,8 +7,8 @@
           <label for="inputNombre" class="text-start">Tu nombre</label>
           <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model="nombre">
           <br>
-          <p>Validar nombre: {{ nombre }}</p>
-          <br>
+          <!-- <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
+          <br> -->
           <label for="inputEdad" class="form-label text-start">Edad</label>
           <input type="number" class="form-control" id="inputEdad" placeholder="Edad">
           <br>
@@ -45,10 +45,26 @@
             </div>
           </div>
           <br>
-          <p>Validar JS: {{ javascript }}</p>
+          <!-- <p>Validar JS: <span class="text-success fw-bold">{{ javascript }}</span></p> -->
           <label for="areaComentarios" class="form-label text-start">Comentarios</label>
           <textarea class="form-control" id="areaComentarios" rows="3"></textarea>
           <br>
+          <div class="row">
+            <h4>Tipo de documento</h4>
+            <div class="col">
+              <input type="radio" name="checkDNI" class="form-check-input">
+              <label for="checkDNI">DNI</label>
+            </div>
+            <div class="col">
+              <input type="radio" name="checkDNI" class="form-check-input">
+              <label for="checkDNI">Pasaporte</label>
+            </div>
+            <div class="col">
+              <input type="radio" name="checkDNI" class="form-check-input">
+              <label for="checkDNI">VISA</label>
+            </div>
+          </div>
+          <hr>
           <div class="row">
             <br>
             <div class="col-10"></div>
@@ -100,5 +116,8 @@ export default {
 <style scoped>
 a {
   color: #42b983;
+}
+label {
+  margin-left: 0.5em !important;
 }
 </style>
