@@ -7,8 +7,8 @@
           <label for="inputNombre" class="text-start">Tu nombre</label>
           <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model="nombre">
           <br>
-          <!-- <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
-          <br> -->
+          <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
+          <br>
           <label for="inputEdad" class="form-label text-start">Edad</label>
           <input type="number" class="form-control" id="inputEdad" placeholder="Edad">
           <br>
