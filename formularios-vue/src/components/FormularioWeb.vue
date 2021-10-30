@@ -18,11 +18,11 @@
           <div class="row">
             <h4>Selecciona tu curso</h4>
             <div class="col col-2">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="javascript" id="javascript" v-model="chequeados">
-                <label class="form-check-label" for="javascript">
-                  JavaScript
-                </label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="javascript" id="javascript" v-model="chequeados">
+              <label class="form-check-label" for="javascript">
+                JavaScript
+              </label>
                 <br>
                 <input class="form-check-input" type="checkbox" value="react" id="react" v-model="chequeados">
                 <label class="form-check-label" for="react">
@@ -100,10 +100,6 @@ export default {
         chequeados: [],
     //   edad: 0,
     //   email: '',
-      javascript: false,
-    //   react: false,
-    //   angular: false,
-    //   vue: false,
     //   comentarios: ''
     }
   }
