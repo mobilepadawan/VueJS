@@ -19,33 +19,30 @@
             <h4>Selecciona tu curso</h4>
             <div class="col col-2">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="checkJS" v-model="javascript">
-                <label class="form-check-label" for="checkJS">
+                <input class="form-check-input" type="checkbox" value="javascript" id="javascript" v-model="chequeados">
+                <label class="form-check-label" for="javascript">
                   JavaScript
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="checkReact">
-                <label class="form-check-label" for="checkReact">
+                <br>
+                <input class="form-check-input" type="checkbox" value="react" id="react" v-model="chequeados">
+                <label class="form-check-label" for="react">
                   React
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="checkNg">
-                <label class="form-check-label text-start" for="checkNg">
+                <br>
+                <input class="form-check-input" type="checkbox" value="angular" id="angular" v-model="chequeados">
+                <label class="form-check-label text-start" for="angular">
                   Angular
                 </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="checkVue">
-                <label class="form-check-label" for="checkVue">
+                <br>
+                <input class="form-check-input" type="checkbox" value="vue" id="vue" v-model="chequeados">
+                <label class="form-check-label" for="vue">
                   Vue
                 </label>
               </div>
             </div>
           </div>
           <br>
-          <!-- <p>Validar JS: <span class="text-success fw-bold">{{ javascript }}</span></p> -->
+          <p>Confirmados: <span class="text-success fw-bold">{{ chequeados }}</span></p>
           <label for="areaComentarios" class="form-label text-start">Comentarios</label>
           <textarea class="form-control" id="areaComentarios" rows="3"></textarea>
           <br>
@@ -100,6 +97,7 @@ export default {
   data() {
     return {
       nombre: '',
+        chequeados: [],
     //   edad: 0,
     //   email: '',
       javascript: false,
