@@ -15,6 +15,14 @@
           <label for="inputEmail" class="form-label text-start">Email</label>
           <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com">
           <br>
+          <label for="select" class="form-label text-start">País</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <br>
           <div class="row">
             <h4>Selecciona tu curso</h4>
             <div class="col col-2">
