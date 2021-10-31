@@ -18,10 +18,10 @@
           <label for="select" class="form-label text-start">País</label>
           <select class="form-select" v-model="pais">
             <option selected></option>
-            <option v-for="option in selectOptions" 
-                    v-bind:value="option.id" 
-                    v-bind:key="option.index">
-              {{ option.pais }}
+            <option v-for="pais in listaPaises" 
+                    v-bind:value="pais.id" 
+                    v-bind:key="pais.index">
+              {{ pais.pais }}
             </option>
           </select>
           <br>
@@ -111,7 +111,7 @@ export default {
       nombre: '',
         chequeados: [],
         pais: '',
-        selectOptions: [
+        listaPaises: [
           {
             id: 'A',
             pais: 'Argentina'
