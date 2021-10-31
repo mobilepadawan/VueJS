@@ -10,18 +10,22 @@
           <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
           <br>
           <label for="inputEdad" class="form-label text-start">Edad</label>
-          <input type="number" class="form-control" id="inputEdad" placeholder="Edad">
+          <input type="number" class="form-control" id="inputEdad" placeholder="Edad" v-model.number="edad">
           <br>
           <label for="inputEmail" class="form-label text-start">Email</label>
           <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com">
           <br>
           <label for="select" class="form-label text-start">País</label>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" v-model="pais">
             <option selected></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option v-for="option in selectOptions" 
+                    v-bind:value="option.id" 
+                    v-bind:key="option.index">
+              {{ option.pais }}
+            </option>
           </select>
+          <br>
+          <p>Tu selección: <span class="text-warning fw-bold">{{ pais }}</span></p>
           <br>
           <div class="row">
             <h4>Selecciona tu curso</h4>
@@ -75,7 +79,7 @@
             <div class="col-10"></div>
             <br>
             <div class="col-2">
-              <input type="submit" class="btn btn-primary" value="ENVIAR">
+              <input type="submit" class="btn btn-primary" value="ENVIAR" v-on:click.stop="enviarFormulario">
             </div>
             <br>
           </div>
@@ -106,7 +110,26 @@ export default {
     return {
       nombre: '',
         chequeados: [],
-    //   edad: 0,
+        pais: '',
+        selectOptions: [
+          {
+            id: 'A',
+            pais: 'Argentina'
+          },
+          {
+            id: 'B',
+            pais: 'Uruguay'
+          },
+          {
+            id: 'C',
+            pais: 'Perú'
+          },
+          {
+            id: 'D',
+            pais: 'Colombia'
+          }
+        ],
+      edad: "46",
     //   email: '',
     //   comentarios: ''
     }
