@@ -1,19 +1,17 @@
 <template> 
   <div class="container">
-    <form action="" v-on:submit.prevent="onSubmit">
+    <form id="app" @submit="validarContenidoCargado" action="/haceralgo" method="POST">
       <div class="row">
         <div class="col col-12">
           <br><br>
-          <label for="inputNombre" class="text-start">Tu nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model.lazy="nombre">
+          <label for="nombre" class="text-start">Tu nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre completo" v-model="nombre">
           <br>
-          <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
+          <label for="edad" class="form-label text-start">Edad</label>
+          <input type="number" class="form-control" name="edad" id="edad" placeholder="Edad" min="0" v-model="edad">
           <br>
-          <label for="inputEdad" class="form-label text-start">Edad</label>
-<input type="number" class="form-control" id="inputEdad" placeholder="Edad" v-model.number="edad">
-          <br>
-          <label for="inputEmail" class="form-label text-start">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com">
+          <label for="email" class="form-label text-start">Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="tu@email.com" v-model="email">
           <br>
           <label for="select" class="form-label text-start">País</label>
           <select class="form-select" v-model="pais">
@@ -25,7 +23,12 @@
             </option>
           </select>
           <br>
-          <p>Tu selección: <span class="text-warning fw-bold">{{ pais }}</span></p>
+          <div v-if="errors.length > 0">
+          <p>Errores detectados: </p>
+            <ul class="text-warning fw-bold">
+              {{ <li v-for="error in errors" v-bind:key="error.index">{{ error }}</li> }}
+            </ul>
+          </div>
           <br>
           <div class="row">
             <h4>Selecciona tu curso</h4>
@@ -95,9 +98,9 @@ export default {
   props: {
     formulario: [
       {
-        nombre: '',
-        edad: 0,
-        email: '',
+        nombre: null,
+        edad: null,
+        email: null,
         javascript: false,
         react: false,
         angular: false,
@@ -108,41 +111,37 @@ export default {
   },
   data() {
     return {
+      errors: [],
       nombre: '',
-        chequeados: [],
+      email: '',
+      edad: 0,
+      chequeados: [],
         pais: '',
-        listaPaises: [
-          {
-            id: 'A',
-            pais: 'Argentina'
-          },
-          {
-            id: 'B',
-            pais: 'Uruguay'
-          },
-          {
-            id: 'C',
-            pais: 'Perú'
-          },
-          {
-            id: 'D',
-            pais: 'Colombia'
-          }
-        ],
-      edad: "46",
-    //   email: '',
-    //   comentarios: ''
+        listaPaises: [{id: 'A', pais: 'Argentina'},
+                      {id: 'B', pais: 'Uruguay'},
+                      {id: 'C', pais: 'Perú'},
+                      {id: 'D', pais: 'Colombia'}]
+    }
+  },
+  methods: {
+    validarContenidoCargado: (e)=> {
+      if (this.nombre && this.edad && this.email) {
+        return true
+      }
+      if (this.nombre === '') {this.errors.push('El nombre es obligatorio.')}
+      if (this.email === '') {this.errors.push('El correo electrónico es obligatorio.')}
+      if (this.edad === 0) {this.errors.push('La edad debe ser mayor a 0 (cero).')}
+      e.preventDefault()
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-a {
-  color: #42b983;
-}
-label {
-  margin-left: 0.5em !important;
-}
+  a {
+    color: #42b983;
+  }
+  label {
+    margin-left: 0.5em !important;
+  }
 </style>
