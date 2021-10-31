@@ -1,16 +1,16 @@
 <template> 
   <div class="container">
-    <form action="">
+    <form action="" v-on:submit.prevent="onSubmit">
       <div class="row">
         <div class="col col-12">
           <br><br>
           <label for="inputNombre" class="text-start">Tu nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model="nombre">
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre completo" v-model.lazy="nombre">
           <br>
           <p>Validar nombre: <span class="text-success fw-bold">{{ nombre }}</span></p>
           <br>
           <label for="inputEdad" class="form-label text-start">Edad</label>
-          <input type="number" class="form-control" id="inputEdad" placeholder="Edad" v-model.number="edad">
+<input type="number" class="form-control" id="inputEdad" placeholder="Edad" v-model.number="edad">
           <br>
           <label for="inputEmail" class="form-label text-start">Email</label>
           <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com">
@@ -79,7 +79,7 @@
             <div class="col-10"></div>
             <br>
             <div class="col-2">
-              <input type="submit" class="btn btn-primary" value="ENVIAR" v-on:click.stop="enviarFormulario">
+              <input type="submit" class="btn btn-primary" value="ENVIAR">
             </div>
             <br>
           </div>
