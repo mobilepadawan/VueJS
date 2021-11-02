@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="CH logo" src="./assets/logo.jpg">
+    <img alt="CH logo" src="./assets/logo.jpg" >
     <HelloWorld msg="Bienvenido a tu SPA"/>
   </div>
 </template>
