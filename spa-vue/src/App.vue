@@ -1,7 +1,13 @@
 <template>
   <div id="app">
+    <div id="menu">
+      <router-link to="/">Home</router-link>
+      <router-link to="/contacto">Contacto</router-link>
+      <router-link to="/ayuda">Ayuda</router-link>
+    </div>  
     <img alt="CH logo" src="./assets/logo.jpg" >
     <HelloWorld msg="Bienvenido a tu SPA"/>
+    <router-view/>
   </div>
 </template>
 

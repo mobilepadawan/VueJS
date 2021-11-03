@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Contacto from './views/Contacto.vue'
-import Contacto from './views/Ayuda.vue'
+import Ayuda from './views/Ayuda.vue'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
 export default new router({
     mode: 'history',
@@ -27,12 +27,3 @@ export default new router({
         },
     ]
 })
-
-
-
-
-
-
-
-
-
