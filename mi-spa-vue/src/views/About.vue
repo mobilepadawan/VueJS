@@ -20,6 +20,11 @@ export default {
           this.$nextTick() => {
             console.log(this.$el.querySelector('h1'))
           }
+    },
+    methods: {
+      cancelarEventos: ()=> {
+        this.$destroy()
+      }
     }
   }
 }
