@@ -40,9 +40,10 @@ export default {
         "$error": {
             // fields with errors are copied into this object
         },
-        ,
   "$submittedState": {
     // each form sumbit, state is cloned into this object
+    },
+    },
   },
     model: {
       name: '',
