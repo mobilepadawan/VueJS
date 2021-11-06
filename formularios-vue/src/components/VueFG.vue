@@ -62,7 +62,18 @@ methods: {
     }
     // otherwise submit form
     }
-}
+},
+    validators: {
+    matches: function (value, attrValue) {
+        if(!attrValue) {
+            return true
+        }
+        return value === attrValue
+    },
+    'password-strength': function (value) {
+        return /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(value);
+    }
+    }
 }
 </script>
 
