@@ -27,7 +27,23 @@
 export default {
   name: 'VueFG',
   data: {
-    formstate: {},
+    formstate: {
+        "$dirty": false,
+        "$pristine": true,
+        "$valid": false,
+        "$invalid": true,
+        "$submitted": false,
+        "$touched": false,
+        "$untouched": true,
+        "$focused": false,
+        "$pending": false,
+        "$error": {
+            // fields with errors are copied into this object
+        },
+        ,
+  "$submittedState": {
+    // each form sumbit, state is cloned into this object
+  },
     model: {
       name: '',
       email: '',
@@ -36,7 +52,16 @@ export default {
       comments: '',
       notValidated: '',
       agree: false
+    },
+methods: {
+    onSubmit: function () {
+    if(this.formstate.$invalid) {
+        // alert user and exit early
+        return;
     }
+    // otherwise submit form
+    }
+}
 }
 </script>
 
