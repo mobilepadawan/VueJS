@@ -9,5 +9,14 @@ Vue.config.productionTip = false
 Vue.use(VueForm)
 
 new Vue({
+  data: {
+
+  },
+  methods: {
+
+  },
+  computed: {
+
+  },
   render: h => h(App),
 }).$mount('#app')
