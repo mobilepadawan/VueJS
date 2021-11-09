@@ -5,9 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    msg: 'Variable de State declarada en Store'
+    msg: 'Variable de State declarada en Store',
+    nombreDelCurso: 'JQuery a fondo!'
   },
   mutations: {
+    cambiarCurso: (nuevoNombre)=> {
+      state.nombreDelCurso = nuevoNombre
+    }
   },
   actions: {
   },
