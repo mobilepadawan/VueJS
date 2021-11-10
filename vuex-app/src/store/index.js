@@ -9,11 +9,17 @@ export default new Vuex.Store({
     nombreDelCurso: 'JQuery a fondo!'
   },
   mutations: {
-    cambiarCurso: (nuevoNombre)=> {
+    cambiarCurso: (state, nuevoNombre)=> {
       state.nombreDelCurso = nuevoNombre
     }
   },
+  incrementar: (state)=> {
+    state.valor++
+  },
   actions: {
+    cambiarNombreDelCurso: ( context )=> {
+      context.commit(`cambiarCurso(state, 'Vue y Vuex')`)
+    }
   },
   modules: {
   }

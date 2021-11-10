@@ -1,13 +1,18 @@
 <template>
   <div class="hello">
     <h1>{{ $store.state.msg }}</h1>
+    <h2>{{ $store.state.nombreDelCurso }}</h2>
+    <br><br>
+    <button @click="cambiarNombreDelCurso">CAMBIAR CURSO</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-
+  data: {
+    return `Vue y Vuex`
+  }
 }
 </script>
 
