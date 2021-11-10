@@ -6,19 +6,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     msg: 'Variable de State declarada en Store',
-    nombreDelCurso: 'JQuery a fondo!'
+    nombreDelCurso: 'Vue y Vuex!'
   },
   mutations: {
-    cambiarCurso: (state, nuevoNombre)=> {
-      state.nombreDelCurso = nuevoNombre
+    cambiarCurso: (state)=> {
+      state.nombreDelCurso = 'Vue y Vuex'
     }
-  },
-  incrementar: (state)=> {
-    state.valor++
   },
   actions: {
     cambiarNombreDelCurso: ( context )=> {
-      context.commit(`cambiarCurso(state, 'Vue y Vuex')`)
+      context.commit(`cambiarCurso`)
     }
   },
   modules: {
