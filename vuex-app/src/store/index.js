@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     msg: 'Variable de State declarada en Store.',
-    nombreDelCurso: 'Vue y Vuex!'
+    nombreDelCurso: 'Vue y Vuex!',
+    profesion: 'Coder',
+    ubicacion: 'house'
   },
   mutations: {
     cambiarCurso: (state)=> {
@@ -24,6 +26,9 @@ export default new Vuex.Store({
     },
     getNombreDelCurso: (state)=> {
       return state.nombreDelCurso
+    },
+    getConcatState: (state)=> {
+      return `${state.profesion} ${state.ubicacion}`
     }
   }
 })
