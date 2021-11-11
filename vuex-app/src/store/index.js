@@ -18,6 +18,9 @@ export default new Vuex.Store({
       context.commit(`cambiarCurso`)
     }
   },
-  modules: {
+  getters: {
+    getMsg: (state)=> {
+      return msg
+    }
   }
 })
