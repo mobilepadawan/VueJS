@@ -27,8 +27,6 @@ export default new Vuex.Store({
     getNombreDelCurso: (state)=> {
       return state.nombreDelCurso
     },
-    getConcatState: (state)=> {
-      return `${state.profesion} ${state.ubicacion}`
-    }
+
   }
 })
