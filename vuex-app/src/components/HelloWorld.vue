@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ $store.getters.getMsg }}</h1>
-    <h2>{{ $store.state.nombreDelCurso }}</h2>
+    <h2>{{ $store.getters.getConcatStates }}</h2>
     <br><br>
     <button @click="cambioNombre">CAMBIAR CURSO</button>
   </div>
