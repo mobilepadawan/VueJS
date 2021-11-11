@@ -20,7 +20,10 @@ export default new Vuex.Store({
   },
   getters: {
     getMsg: (state)=> {
-      return msg
+      return state.msg
+    },
+    getNombreDelCurso: (state)=> {
+      return state.nombreDelCurso
     }
   }
 })
