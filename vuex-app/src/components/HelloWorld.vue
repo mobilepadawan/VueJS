@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ $store.state.msg }}</h1>
+    <h1>{{ $store.getters.getMsg }}</h1>
     <h2>{{ $store.state.nombreDelCurso }}</h2>
     <br><br>
     <button @click="cambioNombre">CAMBIAR CURSO</button>
