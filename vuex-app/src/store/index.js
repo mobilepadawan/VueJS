@@ -5,12 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    msg: 'Variable de State declarada en Store',
+    msg: 'Variable de State declarada en Store.',
     nombreDelCurso: 'Vue y Vuex!'
   },
   mutations: {
     cambiarCurso: (state)=> {
-      state.nombreDelCurso = 'Vue y Vuex'
+      state.nombreDelCurso = 'Vuex en Vue'
     }
   },
   actions: {
