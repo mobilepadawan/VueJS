@@ -8,17 +8,18 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
 export default {
 name: 'HelloWorld',
   computed: {
-    ...mapState('sucursales', ['sucursales'])
+    listarProductos() {
+        return this.$store.state.productos
+  }
   },
-      methods: {
-        cambioNombre: ()=> {
-          this.$store.dispatch('cambiarNombreDelCurso')
-        }
-      }
+  methods: {
+    cambioNombre: ()=> {
+      this.$store.dispatch('cambiarNombreDelCurso')
+    }
+  }
 }
 </script>
 
