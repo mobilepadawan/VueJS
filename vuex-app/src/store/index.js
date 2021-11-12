@@ -1,11 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-<<<<<<< Updated upstream
 import sucursales from '/src/modules/sucursales'
 
-=======
-//store/index.js
->>>>>>> Stashed changes
 Vue.use(Vuex)
 
 export default new Vuex.Store({
