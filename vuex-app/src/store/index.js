@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import sucursales from 'src/modules/sucursales.js'
+import sucursales from '/src/modules/sucursales'
 
 Vue.use(Vuex)
 
@@ -31,5 +31,8 @@ export default new Vuex.Store({
     getConcatStates: (state)=> {
       return `${state.profesion} ${state.ubicacion}`
     }
+  },
+  modules: {
+    sucursales
   }
 })
