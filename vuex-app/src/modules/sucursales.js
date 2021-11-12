@@ -1,6 +1,6 @@
 export default {
     state: {
-
+        sucursales = ['CABA', 'CÓRDOBA', 'MONTEVIDEO', 'LIMA', 'LAS CONDES']
     }, 
     mutations: {
 
@@ -9,6 +9,8 @@ export default {
 
     },
     getters: {
-        
+        getSucursales: (state)=> {
+            return state.sucursales
+        }
     }
 }
