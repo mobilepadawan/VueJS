@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import tareas from 'src/modules/sucursales.js'
+import sucursales from 'src/modules/sucursales.js'
 
 Vue.use(Vuex)
 

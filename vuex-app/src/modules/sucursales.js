@@ -1,6 +1,6 @@
 export default {
     state: {
-        sucursales = ['CABA', 'CÓRDOBA', 'MONTEVIDEO', 'LIMA', 'LAS CONDES']
+        sucursales: ['CABA', 'CÓRDOBA', 'MONTEVIDEO', 'LIMA', 'LAS CONDES']
     }, 
     mutations: {
 
