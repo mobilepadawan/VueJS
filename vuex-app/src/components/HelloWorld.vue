@@ -10,11 +10,16 @@
 <script>
 export default {
 name: 'HelloWorld',
-      methods: {
-        cambioNombre: ()=> {
-          this.$store.dispatch('cambiarNombreDelCurso')
-        }
-      }
+  computed: {
+    listarProductos() {
+        return this.$store.state.productos
+  }
+  },
+  methods: {
+    cambioNombre: ()=> {
+      this.$store.dispatch('cambiarNombreDelCurso')
+    }
+  }
 }
 </script>
 

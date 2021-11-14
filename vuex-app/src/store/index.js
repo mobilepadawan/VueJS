@@ -5,6 +5,7 @@ import sucursales from '/src/modules/sucursales'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  namespaced: true,
   state: {
     msg: 'Variable de State declarada en Store.',
     nombreDelCurso: 'Vue y Vuex!',
@@ -14,7 +15,7 @@ export default new Vuex.Store({
   },
   mutations: {
     configurarProductos: (state, productos) => {
-      state.productos = productos;
+      state.productos = productos
     },
     cambiarCurso: (state)=> {
       state.nombreDelCurso = 'Vuex en Vue'
@@ -38,5 +39,4 @@ export default new Vuex.Store({
   },
   modules: {
     sucursales
-  }
-})
+  })
