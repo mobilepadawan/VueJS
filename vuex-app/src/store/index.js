@@ -41,3 +41,14 @@ export default new Vuex.Store({
     sucursales
   }
 })
+
+mixins: {
+  mutations: {
+    changeState: function (state, changed) {
+      Object.entries(changed)
+        .forEach(([name, value]) => {
+          state[name] = value
+        })
+    }
+  }
+}
