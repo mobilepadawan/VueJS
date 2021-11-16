@@ -16,7 +16,7 @@ export default new Vuex.Store({
     msg: 'Variable de State declarada en Store.',
     nombreDelCurso: 'Vue y Vuex!',
     profesion: 'Coder',
-    ubicacion: 'house',
+    ubicacion: 'House',
 
   mutations: {
     cambiarCurso: (state)=> {
