@@ -7,18 +7,15 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   namespaced: true,
   state: {
-    productos: [{id: 1, nombre: 'Monitor 24'},
-                {id: 2, nombre: 'Monitor Ultrawide 32'},
-                {id: 3, nombre: 'Monitor Wide 27'},
-                {id: 4, nombre: 'Monitor 21.5'},
-                {id: 5, nombre: 'Monitor 27'}]
-    },    
     msg: 'Variable de State declarada en Store.',
     nombreDelCurso: 'Vue y Vuex!',
     profesion: 'Coder',
     ubicacion: 'House',
 
   mutations: {
+    configurarProductos: (state, productos) => {
+      state.productos = productos
+    },
     cambiarCurso: (state)=> {
       state.nombreDelCurso = 'Vuex en Vue'
     }
@@ -42,4 +39,15 @@ export default new Vuex.Store({
   modules: {
     sucursales
   }
-})
+}})
+
+mixins: {
+  mutations: {
+    changeState: function (state, changed) {
+      Object.entries(changed)
+        .forEach(([name, value]) => {
+          state[name] = value
+        })
+    }
+  }
+}
