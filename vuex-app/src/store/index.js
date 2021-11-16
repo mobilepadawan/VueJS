@@ -40,6 +40,4 @@ export default new Vuex.Store({
     sucursales
   }
 }
-})    }
-  }
-}
+})
