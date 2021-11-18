@@ -3,6 +3,15 @@
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
+<Suspense>
+    <template #default>
+        <MiComponente />
+    </template>
+    <template #fallback>
+        Loading...
+    </template>
+</Suspense>
+
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -10,6 +19,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  }
+}
+
+export default {
+  name: 'MyComponent',
+   async setup () {
+    const result = await fetch(URL)
+     return {
+       result
+    }
   }
 }
 </script>
@@ -24,3 +43,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+
