@@ -10,9 +10,8 @@ export default new Vuex.Store({
     msg: 'Variable de State declarada en Store.',
     nombreDelCurso: 'Vue y Vuex!',
     profesion: 'Coder',
-    ubicacion: 'house',
-    productos: []
-  },
+    ubicacion: 'House',
+
   mutations: {
     configurarProductos: (state, productos) => {
       state.productos = productos
@@ -40,15 +39,5 @@ export default new Vuex.Store({
   modules: {
     sucursales
   }
-})
-
-mixins: {
-  mutations: {
-    changeState: function (state, changed) {
-      Object.entries(changed)
-        .forEach(([name, value]) => {
-          state[name] = value
-        })
-    }
-  }
 }
+})
