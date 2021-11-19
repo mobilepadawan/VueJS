@@ -12,6 +12,12 @@
     </template>
 </Suspense>
 
+<template>
+    <h1>Título principal</h1>
+    <p>Vue 3 ya no exige DIVs para contenernos!</p>
+    <h2>Vue 3</h2>
+</template>
+
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
