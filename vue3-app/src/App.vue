@@ -12,6 +12,23 @@
     </template>
 </Suspense>
 
+<template v-slot:name="name"> {{ usuario.nombre }} {{ usuario.apellido }} 
+  ...
+</template>
+
+<base-layout>
+  <template slot="header">
+    <h1>Aquí podría ir un título de página</h1>
+  </template>
+
+  <p>Un párrafo para el contenido principal.</p>
+  <p>Y otro más.</p>
+
+  <template slot="footer">
+    <p>Aquí va alguna información de contacto</p>
+  </template>
+</base-layout>
+
 <template>
     <h1>Título principal</h1>
     <p>Vue 3 ya no exige DIVs para contenernos!</p>
@@ -34,6 +51,7 @@ export default {
     const result = await fetch(URL)
      return {
        result
+       let transformedMsg = msg |> uppercase |> reverse |> pluralize
     }
   }
 }
