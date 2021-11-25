@@ -8,6 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@vuelidate/core": "^2.0.0-alpha.32",
+    "@vuelidate/validators": "^2.0.0-alpha.25",
+>>>>>>> d9b5bde8c6487868c5902ad2b044502fc0952f8b
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },

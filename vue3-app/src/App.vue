@@ -3,6 +3,8 @@
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
+<<<<<<< HEAD
+=======
 <Suspense>
     <template #default>
         <MiComponente />
@@ -35,6 +37,7 @@
     <h2>Vue 3</h2>
 </template>
 
+>>>>>>> fe46b57084f6eca7c43ea90179e48229202d89e9
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -44,6 +47,8 @@ export default {
     HelloWorld
   }
 }
+<<<<<<< HEAD
+=======
 
 export default {
   name: 'MyComponent',
@@ -55,6 +60,7 @@ export default {
     }
   }
 }
+>>>>>>> fe46b57084f6eca7c43ea90179e48229202d89e9
 </script>
 
 <style>
@@ -67,4 +73,7 @@ export default {
   margin-top: 60px;
 }
 </style>
+<<<<<<< HEAD
+=======
 
+>>>>>>> fe46b57084f6eca7c43ea90179e48229202d89e9
