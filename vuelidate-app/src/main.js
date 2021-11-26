@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import Vuelidate from 'vuelidate'
-
-Vue.use(Vuelidate)
+import { validators } from 'vuelidate'
 
 createApp(App).mount('#app')
